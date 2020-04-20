@@ -1,0 +1,24 @@
+apply plugin: 'groovy'
+apply plugin: 'com.novoda.bintray-release'
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation  'com.android.tools.build:gradle:3.6.2'
+    implementation  'org.aspectj:aspectjtools:1.9.1'
+
+}
+
+publish {
+    //注册bintray时的用户名
+    userOrg = 'xhongy'
+    //要发布的插件的分组名，可以自己定义
+    groupId = 'com.coco.plugin'
+    //要发布的插件的标识
+    artifactId = 'AopPlugin'
+    //要发布的插件版本
+    publishVersion = '1.0.4'
+    //描述
+    desc = 'a plugin of aop '
+    //对应的网址，如果项目代码放在github上，可以填写github中的项目地址
+    website = 'https://github.com/xhongy/AopGradlePlugin.git'
+}
